@@ -1,0 +1,134 @@
+@import '_normalize';
+@import 'fonts';
+
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Roboto', sans-serif;
+// font-family: 'Roboto Condensed', sans-serif;
+
+//? == Vars ==
+
+$PrimaryMain: #2196F3;
+$White: #fff;
+$Black: rgba(#000, 0.87);
+
+
+
+//? == Common ==
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.33;
+	color: $Black;
+}
+
+.container {
+	max-width: 1240px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+//? == Header ==
+
+.header {
+	padding: 25px 0;
+
+	&__container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo {
+		font-family: 'Roboto', sans-serif;
+		font-size: 24px;
+		font-weight: 500;
+		line-height: 50px;
+		color: $Black;
+
+		display: block;
+
+		padding-left: 54px;
+
+		background: url('../img/logo.png') left center / contain no-repeat;
+	}
+
+	&__buttons {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__sign {}
+}
+
+.nav {
+	margin-right: 120px;
+
+	&__list {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+
+	}
+
+	&__item {
+
+		&--active {
+
+			a {
+				color: $PrimaryMain;
+
+				&::after {
+					content: '';
+					display: block;
+					width: 42px;
+					height: 3px;
+					border-radius: 1px;
+
+					position: absolute;
+					left: 0;
+					bottom: 0;
+
+					background-color: $PrimaryMain;
+				}
+			}
+		}
+
+		&:not(:last-of-type) {
+			margin-right: 50px;
+		}
+
+		&:hover {
+
+			a {
+				color: $PrimaryMain;
+			}
+		}
+	}
+
+	&__link {
+		font-family: 'Roboto', sans-serif;
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 2;
+		color: $Black;
+
+		display: block;
+
+		position: relative;
+	}
+}
+
+.sign {
+
+	&__login {}
+
+	&__register {}
+
+	&__settings {}
+}
